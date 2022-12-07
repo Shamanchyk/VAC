@@ -52,6 +52,9 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
 
+
+
+
 export default {
 
   data(){
