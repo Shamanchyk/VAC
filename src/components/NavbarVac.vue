@@ -1,5 +1,5 @@
 <template>
-    <nav class="header">
+    <nav class="header" ref="dropdownMenu">
         <div class="container">
             <div class="naw-wrapper">
                 <router-link to="/" class="logo">
@@ -16,7 +16,7 @@
                             <img src="../assets/img/BurgerMenuExt.png" v-if="mobileNav" @click="toggleMobleNav" key="clear"  alt=""/>
                         </div>
                         <transition name="menu-transition">
-                            <div class="menu" v-show="mobileNav">
+                            <div :class="{ hide }" class="menu" v-show="mobileNav">
                                 <li class="menu-link" v-for="(menu, index) in headerMenu" :key="index">
                                     <router-link :to="menu.path">
                                         {{ menu.name }}
@@ -50,12 +50,29 @@ export default {
                 {name: 'Calculate', path: '/calculate'}
             ],
             mobileNav: false,
+            hide: true,
         }
     },
     methods: {
         toggleMobleNav(){
             this.mobileNav = !this.mobileNav;
         },
+  },
+    watch: {
+        mobileNav: {
+            immediate: true,
+        handler(val) {
+            document.body.classList.toggle('lock', val);
+            },
+        },
+        $route: {
+        deep: true,
+        handler () {
+            this.hide = true;
+            this.mobileNav = false;
+        },
+    }
+        
     },
 }
 </script>
@@ -142,6 +159,7 @@ export default {
     z-index: 2;
     padding-top: 130px;
     padding-left: 60px;
+    overflow-y: scroll;
 }
 
 .menu-link a{
@@ -177,6 +195,11 @@ export default {
 .menu-transition-enter-to{
     transform: translateX(0);
 }
-
+.lock{
+    overflow-y: hidden;
+}
+.scroll-right{
+    padding-right: 17px;
+}
 
 </style>
