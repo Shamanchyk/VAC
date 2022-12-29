@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkvac"]=self["webpackChunkvac"]||[]).push([[359],{359:function(n,r,u){u.r(r),u.d(r,{default:function(){return i}});var e=u(252);function c(n,r,u,c,t,a){return(0,e.wg)(),(0,e.iD)("div",null," Blog ")}var t={},a=u(744);const f=(0,a.Z)(t,[["render",c]]);var i=f}}]);
-//# sourceMappingURL=359.2e3acd36.js.map
+//# sourceMappingURL=359.a25d2654.js.map
