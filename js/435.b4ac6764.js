@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvac"]=self["webpackChunkvac"]||[]).push([[435],{435:function(n,u,r){r.r(u),r.d(u,{default:function(){return i}});var e=r(252);function t(n,u,r,t,a,c){return(0,e.wg)(),(0,e.iD)("div",null," about ")}var a={},c=r(744);const f=(0,c.Z)(a,[["render",t]]);var i=f}}]);
-//# sourceMappingURL=435.b4ac6764.js.map
